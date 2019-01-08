@@ -29,3 +29,17 @@ The formula for gunning fog index is:
 
 The values were extracted and saved as pickle files as the amount of time taken to extract these values was a lot.
 
+## Classification
+
+Three linear classifiers (Logistic Regression, SVM and Naive Bayes) were used for the task and compared. LogR showed the best results with a Macro Average F1 score of .
+
+## Flowchart
+
+The flowchart of the model is as follows:
+
+
+
+## Prediction
+
+Prediction.py file has been created that imports all the feature classes and performs feature extraction upon user input as well as classification and reports it in the form of a simple GUI.
+
