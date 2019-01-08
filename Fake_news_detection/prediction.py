@@ -16,7 +16,7 @@ window.withdraw()
 var = tkinter.simpledialog.askstring("File: ","Enter the news")
 
 
-#retrieving the best model for prediction call
+#retrieving the best model and feature extractors for prediction call
 tfidf=pickle.load(open('tfidf_model.pkl','rb'))
 punct=pickle.load(open('punct_model.pkl','rb'))
 model = pickle.load(open('final_model.pkl', 'rb'))
@@ -37,6 +37,7 @@ readability=np.swapaxes(readability,0,1)
 readability_fit=Scaler.transform(readability)
 feature_mat=np.hstack((tf_idf.toarray(),punct.toarray(),readability_fit,gram_syntax_pred.toarray()))
 
+#prediction and prediction score
 prediction = model.predict(feature_mat)
 prob = model.predict_proba(feature_mat)
 
