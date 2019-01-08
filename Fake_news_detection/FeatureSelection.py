@@ -137,6 +137,7 @@ def dale_chall_readability_score(text):
 
     return legacy_round(raw_score, 2)
 
+#Returns the readability of a sentence
 def get_readability(x):
     gun_fog=[]
     flesh=[]
@@ -147,6 +148,7 @@ def get_readability(x):
         c+=1
     return np.vstack((np.asarray(gun_fog),np.asarray(flesh)))
 
+#Class created to extract grammar syntax
 class GrammarTransformer():
     """
     Convert text to counts of syntactic structure
@@ -162,7 +164,7 @@ class GrammarTransformer():
 
     def get_params(self, deep=True):
         return {}
-
+ #Returns the pcfg counts in form of a dictionary
     def countgrammar(self, texts):
         lookup = {}
         for i, x in enumerate(texts):
