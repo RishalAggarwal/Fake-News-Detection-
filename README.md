@@ -2,6 +2,13 @@
 
 The aim of this project is to classify various news headlines based on their content, syntax and readability as real or fake news. 
 
+
+## Flowchart
+
+The flowchart of the model is as follows:
+
+![alt text](https://github.com/RishalAggarwal/Trump-Fake-News-Detection-/blob/master/Fake_news_detection/Images/flowchart%20(1).jpeg)
+
 ## Dataset
 
 The dataset used is the LIAR dataset for this task. The data preperation and preprocessing has been borrowed from [nishitpatel01](https://github.com/nishitpatel01/Fake_News_Detection).
@@ -47,12 +54,6 @@ The values were extracted and saved as pickle files as the amount of time taken 
 ## Classification
 
 Three linear classifiers (Logistic Regression, SVM and Naive Bayes) were used for the task and compared. LogR showed the best results with a Macro Average F1 score of 0.61.
-
-## Flowchart
-
-The flowchart of the model is as follows:
-
-![alt text](https://github.com/RishalAggarwal/Trump-Fake-News-Detection-/blob/master/Fake_news_detection/Images/flowchart%20(1).jpeg)
 
 ## Prediction
 
