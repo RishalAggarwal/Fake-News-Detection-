@@ -25,19 +25,29 @@ Probabilistic context free grammar syntax (pcfg) vectors were extracted from the
 Flesch and Gunning fog values were extracted to use as readability parameters in the model. 
 The formula for flesch reading index is:
 
+Reading Ease score = 206.835 - (1.015 × ASL) - (84.6 × ASW)
+Here,
+ASL = average sentence length (number of words divided by number of sentences)
+ASW = average word length in syllables (number of syllables divided by number of words)
+
+
 The formula for gunning fog index is:
+
+Grade level= 0.4 * ( (average sentence length) + (percentage of Hard Words) )
+Here, 
+Hard Words = words with more than two syllables.
 
 The values were extracted and saved as pickle files as the amount of time taken to extract these values was a lot.
 
 ## Classification
 
-Three linear classifiers (Logistic Regression, SVM and Naive Bayes) were used for the task and compared. LogR showed the best results with a Macro Average F1 score of .
+Three linear classifiers (Logistic Regression, SVM and Naive Bayes) were used for the task and compared. LogR showed the best results with a Macro Average F1 score of 0.61.
 
 ## Flowchart
 
 The flowchart of the model is as follows:
 
-
+![alt text](https://github.com/RishalAggarwal/Trump-Fake-News-Detection-/blob/master/Fake_news_detection/Images/flowchart%20(1).jpeg)
 
 ## Prediction
 
