@@ -26,15 +26,20 @@ Flesch and Gunning fog values were extracted to use as readability parameters in
 The formula for flesch reading index is:
 
 Reading Ease score = 206.835 - (1.015 × ASL) - (84.6 × ASW)
+
 Here,
+
 ASL = average sentence length (number of words divided by number of sentences)
+
 ASW = average word length in syllables (number of syllables divided by number of words)
 
 
 The formula for gunning fog index is:
 
 Grade level= 0.4 * ( (average sentence length) + (percentage of Hard Words) )
+
 Here, 
+
 Hard Words = words with more than two syllables.
 
 The values were extracted and saved as pickle files as the amount of time taken to extract these values was a lot.
