@@ -28,13 +28,19 @@ import FeatureSelection
 from sklearn.feature_extraction import DictVectorizer
 from sklearn.feature_extraction.text import TfidfTransformer
 
-
+#punctuation counter
 countV = CountVectorizer(token_pattern=r"!|\?|\"|\'|,|\.|;|:|-|\(|\)")
+#tfidf vector
 tfidf_ngram = TfidfVectorizer(stop_words='english',ngram_range=(1,2),use_idf=True,smooth_idf=True)
+#selector based on mutual information
 selector=SelectKBest(score_func=mutual_info_classif,k=20000)
+#grammar syntax extractor
 gram=FeatureSelection.GrammarTransformer(spacy.load('en'))
+#dictionary vectorizer
 dictvec=DictVectorizer()
+#tfidf transformer for pcfgs
 tfidftrans=TfidfTransformer()
+#scaler for readability
 min_max_scaler = preprocessing.MinMaxScaler()
 
 count_punct_train=countV.fit_transform(DataPrep.train_news['Statement'].values)
@@ -130,6 +136,7 @@ punct_file='punct_model.pkl'
 tfidf_file='tfidf_model.pkl'
 model_file = 'final_model.pkl'
 
+#saving files for prediction
 pickle.dump(min_max_scaler,open(min_max_scaler_file,'wb'))
 pickle.dump(dictvec,open(dictvec_file,'wb'))
 pickle.dump(tfidftrans,open(tfidftrans_file,'wb'))
