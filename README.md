@@ -1,4 +1,4 @@
-# Trump-Fake-News-Detection
+# Fake-News-Detection
 
 The aim of this project is to classify various news headlines based on their content, syntax and readability as real or fake news. 
 
